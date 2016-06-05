@@ -1,0 +1,16 @@
+https://github.com/joshuampfeffer/cpe357
+
+look - display lines beginning with a given string
+
+Usage: 
+>> make
+>> ./look [-df] [-t termchar] string [file]
+
+Description: Using a binary search, the look tool displays any lines in file which contain string as a prefix.
+
+IMPORTANT: The lines in file MUST be sorted. If a file is not specified, the built-in UNIX dictionary (/usr/share/dict/words) is used, in which only alphanumeric characters (case-insensitive) are compared.
+
+Optional Flags:
+-d    Only alphanumeric characters are compared.
+-f    Ignore the case of alphabetic characters.
+-t    Specify a string termination character (i.e. only the characters in string up to and including the first occurrence of termchar are compared).
