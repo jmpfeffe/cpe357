@@ -22,9 +22,9 @@ void ParseCmdLine(int argc, char **argv, int *dFlag, int *fFlag, char
          break;
       case '?':
          if (optopt == 't')
-            fprintf(stderr, "usage: look [-dfa] [-t char] string [file]\n");
+            fprintf(stderr, "usage: ./look [-df] [-t char] string [file]\n");
          else if (isprint(optopt))
-            fprintf(stderr, "usage: look [-dfa] [-t char] string [file]\n");
+            fprintf(stderr, "usage: ./look [-df] [-t char] string [file]\n");
          else
             fprintf(stderr, "Unknown option character `\\x%x'.\n", optopt);
          exit(1);
@@ -43,7 +43,7 @@ void ParseCmdLine(int argc, char **argv, int *dFlag, int *fFlag, char
    }
 
    if (!strlen(string)) {
-      fprintf(stderr, "usage: look [-dfa] [-t char] string [file]\n");
+      fprintf(stderr, "usage: ./look [-df] [-t char] string [file]\n");
       exit(1);
    }
 
